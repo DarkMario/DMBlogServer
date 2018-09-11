@@ -29,4 +29,10 @@ public class indexController {
 
 		return JSONObject.toJSONString(u);
 	}
+	
+	
+	@RequestMapping("/setUser")
+	private void setUser(User user) {
+	System.out.println(user.toString());	
+	}
 }
