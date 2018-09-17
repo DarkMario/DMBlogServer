@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "76521437-29f9-4f79-961d-329af29b246b",
+		"name": "DMBlog接口测试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "DarkMario",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "DarkMario4321",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "created_time",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da8402a0-72e9-4f3c-a39f-17dce6c206ce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c2bd59a3-6da2-40bc-99c6-f3329df37458",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "bb2332bc-3f6a-4e45-909f-f837a3d80030",
+			"key": "url",
+			"value": "http://192.168.2.224:8989",
+			"type": "string"
+		}
+	]
+}

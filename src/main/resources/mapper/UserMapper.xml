@@ -2,11 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 
 <mapper namespace="com.DarkMario.blog.dao.UserDao">
-
-
-	<select id="getNameById" parameterType="com.DarkMario.blog.entity.User"
+	<select id="getUser"
+		parameterType="com.DarkMario.blog.entity.User"
 		resultType="com.DarkMario.blog.entity.User">
-		SELECT * FROM TBQD_users WHERE name = 'DarkMario'
+		SELECT * FROM User 
+		<where>
+		<if test="username!=null and username!=''">
+			USERNAME = #{username}
+		</if>
+		<if test="password!=null and password!=''">
+		  and PASSWORD = #{password}
+		 </if>
+		 <if test="created_time!=null and created_time!=''">
+		  and CREATED_TIME = #{created_time}
+		 </if>
+		 </where>
 	</select>
-
 </mapper>
